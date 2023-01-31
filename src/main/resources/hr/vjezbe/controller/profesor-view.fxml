@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="763.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.vjezbe.controller.ProfesorController">
+    <children>
+        <VBox alignment="CENTER" layoutX="194.0" layoutY="48.0" prefHeight="322.0" prefWidth="412.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="31.0" prefWidth="448.0" text="Pretraživanje profesora">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Label>
+                <HBox fillHeight="false" prefHeight="232.0" prefWidth="269.0">
+                    <children>
+                        <VBox prefHeight="223.0" prefWidth="151.0">
+                            <children>
+                                <VBox alignment="CENTER_RIGHT" prefHeight="203.0" prefWidth="146.0" spacing="30.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" text="Šifra:">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Prezime:">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" text="Ime:">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Titula:">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets right="10.0" />
+                                    </VBox.margin>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox fillWidth="false" prefHeight="203.0" prefWidth="302.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="203.0" prefWidth="176.0" spacing="30.0">
+                                    <children>
+                                        <TextField fx:id="sifraTextField" />
+                                        <TextField fx:id="prezimeTextField" />
+                                        <TextField fx:id="imeTextField" />
+                              <TextField fx:id="titulaTextField" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <Button fx:id="pretraziButton" mnemonicParsing="false" onAction="#pretrazi" text="Pretraži" />
+            </children>
+        </VBox>
+        <TableView fx:id="tableView" layoutY="400.0" prefHeight="363.0" prefWidth="800.0">
+            <columns>
+                <TableColumn fx:id="sifraTableColumn" prefWidth="200.0" style="-fx-alignment: CENTER;" text="Šifra" />
+                <TableColumn fx:id="prezimeTableColumn" prefWidth="200.0" style="-fx-alignment: CENTER;" text="Prezime" />
+                <TableColumn fx:id="imeTableColumn" prefWidth="200.0" style="-fx-alignment: CENTER;" text="Ime" />
+                <TableColumn fx:id="titulaTableColumn" prefWidth="200.0" style="-fx-alignment: CENTER;" text="Titula" />
+            </columns>
+        </TableView>
+      <MenuBar layoutX="-3.0" layoutY="-1.0" prefHeight="31.0" prefWidth="806.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Student">
+               <items>
+                  <MenuItem fx:id="pretraziStudente" mnemonicParsing="false" onAction="#pretraziStudente" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiStudenta" text="Unos" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Profesor">
+               <items>
+                  <MenuItem fx:id="pretraziProfesore" mnemonicParsing="false" onAction="#pretraziProfesore" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiProfesora" text="Unos" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Predmet">
+               <items>
+                  <MenuItem fx:id="pretraziPredmete" mnemonicParsing="false" onAction="#pretraziPredmete" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiPredmet" text="Unos" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ispit">
+               <items>
+                  <MenuItem fx:id="pretraziIspit" mnemonicParsing="false" onAction="#pretraziIspite" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiIspit" text="Unos" />
+               </items>
+            </Menu>
+         </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+    </children>
+</AnchorPane>

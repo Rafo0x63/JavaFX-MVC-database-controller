@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="763.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.vjezbe.controller.DodajIspitController">
+   <children>
+      <MenuBar prefHeight="31.0" prefWidth="806.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Student">
+               <items>
+                  <MenuItem fx:id="pretraziStudente" mnemonicParsing="false" onAction="#pretraziStudente" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiStudenta" text="Unesi" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Profesor">
+               <items>
+                  <MenuItem fx:id="pretraziProfesore" mnemonicParsing="false" onAction="#pretraziProfesore" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiProfesora" text="Unesi" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Predmet">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#pretraziPredmete" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiPredmet" text="Unesi" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ispit">
+               <items>
+                  <MenuItem fx:id="pretraziIspit" mnemonicParsing="false" onAction="#pretraziIspite" text="Pretraži" />
+                  <MenuItem mnemonicParsing="false" onAction="#unesiIspit" text="Unesi" />
+               </items>
+            </Menu>
+         </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+      <Label layoutX="252.0" layoutY="70.0" prefHeight="31.0" prefWidth="252.0" text="Dodavanje novog ispita">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <HBox layoutX="182.0" layoutY="173.0" prefHeight="213.0" prefWidth="385.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="213.0" prefWidth="137.0" spacing="30.0">
+               <children>
+                  <Label text="Predmet:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Student:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Ocjena:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="132.0" text="Datum i vrijeme:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="213.0" prefWidth="209.0" spacing="30.0">
+               <children>
+                  <ComboBox fx:id="predmetComboBox" prefWidth="150.0" />
+                  <ComboBox fx:id="studentComboBox" prefWidth="150.0" />
+                  <ComboBox fx:id="ocjenaComboBox" prefWidth="150.0" />
+                  <TextField fx:id="datumVrijemeTextField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="dodajButton" layoutX="378.0" layoutY="430.0" mnemonicParsing="false" onAction="#dodaj" text="Dodaj" />
+   </children>
+</AnchorPane>
