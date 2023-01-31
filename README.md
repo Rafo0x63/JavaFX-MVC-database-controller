@@ -8,5 +8,5 @@ Some things may be fixed or changed in the future but due to a lack of time new 
 
 How to use: 
 Download H2 and run it, create a ne Generic H2 embedded database and change the URL, username and password in the "baza.properties" file located in the "dat" folder.
-You can run a premade script in the browser, just copy the text from "DBScript.txt" also located in "dat" and paste it in the H2 console texfield for some initial data or you can just add some yourself.
+You can run a premade script in the browser, just copy the text from "DBScript.txt" also located in "dat" and paste it in the H2 console texfield for some initial data and run the app from the "PretrazivacApplication" class or you can just add some data yourself using the app.
 Entities can also be added, deleted or edited using the H2 console.
